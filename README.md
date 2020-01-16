@@ -9,5 +9,3 @@
   1. Simple and Flexible UI
   2. Fast and Improve performance on lower performing systems
   
-# License
-  [MIT](https://github.com/nishanths/license/blob/master/LICENSE)
