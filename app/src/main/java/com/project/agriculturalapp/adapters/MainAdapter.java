@@ -41,12 +41,11 @@ public viewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
 @Override
 public void onBindViewHolder(viewHolder holder, final int position) {
-        holder.linear.setBackgroundColor(Color.parseColor(list.get(position).getBackgroundColor()));
         holder.englishText.setText(list.get(position).getEnglishText());
         holder.hindiText.setText(list.get(position).getHindiText());
         holder.imageView.setImageResource(list.get(position).getImageUrl());
 
-        holder.linear.setOnClickListener(new View.OnClickListener() {
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(list.get(position).getIntent()!=null)
@@ -63,11 +62,9 @@ public int getItemCount() {
 public static class viewHolder extends RecyclerView.ViewHolder{
     ImageView imageView;
     TextView hindiText,englishText;
-    LinearLayout linear;
 
     public viewHolder(View itemView) {
         super(itemView);
-        linear=(LinearLayout)itemView.findViewById(R.id.linear);
         imageView= (ImageView) itemView.findViewById(R.id.imageView);
         hindiText= (TextView) itemView.findViewById(R.id.hindi_title);
         englishText= (TextView) itemView.findViewById(R.id.english_title);
