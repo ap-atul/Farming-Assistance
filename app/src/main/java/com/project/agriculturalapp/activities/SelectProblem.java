@@ -22,10 +22,16 @@ public class SelectProblem extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.content_recycler);
+        setContentView(R.layout.activity_select_problem);
 
         Toolbar toolbar= (Toolbar) findViewById(R.id.toolbar);
         //setSupportActionBar(toolbar);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
 
         Intent[] links=getIntents();
 
