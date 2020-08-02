@@ -30,8 +30,8 @@
                           <map>
                             <entry key="assetSourceType" value="FILE" />
                             <entry key="color" value="ffffff" />
-                            <entry key="outputName" value="ic_bean" />
-                            <entry key="sourceFile" value="C:\Users\Ishan\Downloads\bean.svg" />
+                            <entry key="outputName" value="ic_robot" />
+                            <entry key="sourceFile" value="C:\Users\Ishan\Downloads\robot.svg" />
                           </map>
                         </option>
                       </PersistentState>

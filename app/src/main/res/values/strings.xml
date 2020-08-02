@@ -72,11 +72,14 @@
     <string name="horticulture_card_title_hi">बागवानी की उन्‍नत विधियां</string>
 
     <string name="policy_card_title_en">Government Schemes</string>
+
+    <string name="chatbot_en"> Chatbot  </string>
+
     <string name="policy_card_title_hi"> सरकार की योजनाएं  </string>
 
+    <string name="chatbot_hi"> चैटबॉट  </string>
 
     <string name="horticulture_item1_en">Mango</string>
-
 
     <string name="horticulture_item2_en">Banana</string>
 

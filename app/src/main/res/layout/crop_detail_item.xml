@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.CardView card_view:cardCornerRadius="2dp"
+<androidx.cardview.widget.CardView card_view:cardCornerRadius="2dp"
     card_view:cardElevation="8dp"
     android:layout_margin="4dp"
     card_view:cardUseCompatPadding="true"
@@ -65,4 +65,4 @@
 
     </LinearLayout>
 
-</android.support.v7.widget.CardView>
+</androidx.cardview.widget.CardView>

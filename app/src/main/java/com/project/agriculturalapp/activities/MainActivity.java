@@ -1,27 +1,16 @@
 package com.project.agriculturalapp.activities;
 
-import android.Manifest;
-import android.annotation.TargetApi;
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.design.widget.NavigationView;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
-import android.text.method.LinkMovementMethod;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.appcompat.widget.Toolbar;
+
 import android.util.Log;
-import android.view.MenuItem;
 import android.view.View;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.project.agriculturalapp.R;
 import com.project.agriculturalapp.adapters.MainAdapter;
@@ -34,10 +23,10 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private MainAdapter adapter;
 
-    private Integer[] imageUrls={R.drawable.ic_vegetable,R.drawable.ic_pesticide,R.drawable.ic_parliament};
-    private Integer[] hindiTexts={R.string.crop_production_card_title_hi,R.string.treatment_card_title_hi,R.string.policy_card_title_hi};
-    private Integer[] englishTexts={R.string.crop_production_card_title_en,R.string.treatment_card_title_en,R.string.policy_card_title_en};
-    private String[] backgroundColors={"#35e372","#a4f075","#ff9f80"};
+    private Integer[] imageUrls={R.drawable.ic_vegetable,R.drawable.ic_pesticide,R.drawable.ic_parliament, R.drawable.ic_robot};
+    private Integer[] hindiTexts={R.string.crop_production_card_title_hi,R.string.treatment_card_title_hi,R.string.policy_card_title_hi, R.string.chatbot_hi};
+    private Integer[] englishTexts={R.string.crop_production_card_title_en,R.string.treatment_card_title_en,R.string.policy_card_title_en, R.string.chatbot_en};
+    private String[] backgroundColors={"#35e372","#a4f075","#ff9f80", "#ff9f80"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +38,8 @@ public class MainActivity extends AppCompatActivity {
         Intent[] links={
                 new Intent(MainActivity.this, CropProductionActivity.class),
                 new Intent(MainActivity.this, SelectProblem.class),
-                new Intent(MainActivity.this, Select_Policy.class)
+                new Intent(MainActivity.this, Select_Policy.class),
+                new Intent(MainActivity.this, ChatbotActivity.class)
         };
 
         list = new ArrayList<>();
