@@ -33,32 +33,28 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".activities.Select_Policy"
-            android:label="@string/policy_title"
-            android:theme="@style/AppTheme">
+            android:label="@string/policy_title">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activities.MainActivity" />
         </activity>
         <activity
             android:name=".activities.SelectProblem"
-            android:label="@string/problem_title"
-            android:theme="@style/AppTheme">
+            android:label="@string/problem_title">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activities.MainActivity" />
         </activity>
         <activity
             android:name=".activities.TreatmentDetail"
-            android:label="@string/treatment_detail_title"
-            android:theme="@style/AppTheme">
+            android:label="@string/treatment_detail_title">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activities.SelectProblem" />
         </activity>
         <activity
             android:name=".activities.CropProductionActivity"
-            android:label="@string/crops_production_title"
-            android:theme="@style/AppTheme">
+            android:label="@string/crops_production_title">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activities.MainActivity" />
@@ -121,8 +117,7 @@
         </activity>
         <activity
             android:name=".activities.CropDetailActivity"
-            android:label="@string/crop_detail_title"
-            android:theme="@style/AppTheme">
+            android:label="@string/crop_detail_title">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activities.CropProductionActivity" />

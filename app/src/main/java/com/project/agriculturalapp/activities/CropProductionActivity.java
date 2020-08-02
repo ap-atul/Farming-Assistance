@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 import com.project.agriculturalapp.R;
@@ -20,7 +21,7 @@ public class CropProductionActivity extends AppCompatActivity {
     ArrayList<MainListItem> list;
     MainAdapter adapter;
 
-    Integer[] imageUrls={R.raw.wheat,R.raw.paddy,R.raw.arhar};
+    Integer[] imageUrls={R.drawable.ic_wheat,R.drawable.ic_rice,R.drawable.ic_bean};
 
     Integer[] hindiTexts={R.string.crop1_hi,R.string.crop2_hi,
             R.string.crop3_hi};
@@ -33,11 +34,15 @@ public class CropProductionActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.content_recycler);
+        setContentView(R.layout.activity_crop_production);
 
-        if(getSupportActionBar()!=null){
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        }
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
 
         list=new ArrayList<>();
 
