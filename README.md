@@ -6,5 +6,5 @@
   2. Government APIs for Data fetching
   
 # Features 
-  1. Simple and Flexible UI
+  1. super Simple and Flexible UI
   2. Fast and Improve performance on lower-performing systems
