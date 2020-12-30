@@ -1,13 +1,12 @@
 package com.project.agriculturalapp.adapters;
 
 import android.content.Context;
-import android.graphics.Color;
-import android.support.v7.widget.RecyclerView;
+
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.project.agriculturalapp.R;
@@ -41,12 +40,11 @@ public viewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
 @Override
 public void onBindViewHolder(viewHolder holder, final int position) {
-        holder.linear.setBackgroundColor(Color.parseColor(list.get(position).getBackgroundColor()));
         holder.englishText.setText(list.get(position).getEnglishText());
         holder.hindiText.setText(list.get(position).getHindiText());
         holder.imageView.setImageResource(list.get(position).getImageUrl());
 
-        holder.linear.setOnClickListener(new View.OnClickListener() {
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(list.get(position).getIntent()!=null)
@@ -63,11 +61,9 @@ public int getItemCount() {
 public static class viewHolder extends RecyclerView.ViewHolder{
     ImageView imageView;
     TextView hindiText,englishText;
-    LinearLayout linear;
 
     public viewHolder(View itemView) {
         super(itemView);
-        linear=(LinearLayout)itemView.findViewById(R.id.linear);
         imageView= (ImageView) itemView.findViewById(R.id.imageView);
         hindiText= (TextView) itemView.findViewById(R.id.hindi_title);
         englishText= (TextView) itemView.findViewById(R.id.english_title);

@@ -1,10 +1,10 @@
 package com.project.agriculturalapp.activities;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.appcompat.widget.Toolbar;
 import android.view.View;
 
 import com.project.agriculturalapp.R;
@@ -24,10 +24,16 @@ public class Select_Policy extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.content_recycler);
+        setContentView(R.layout.activity_select_policy);
 
         Toolbar toolbar= (Toolbar) findViewById(R.id.toolbar);
         //setSupportActionBar(toolbar);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
 
         links=getResources().getStringArray(R.array.policies_link);
 
